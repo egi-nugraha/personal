@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Egi & Jelica Wedding Invitation</title>
 
-  <!-- ============================================
-       Meta Tags untuk Link Preview (WhatsApp, TG, FB)
-       ============================================ -->
+  <!-- Meta Tags for Link Preview (WhatsApp, TG, FB) -->
   <meta property="og:type" content="website">
   <meta id="ogTitle" property="og:title" content="Egi & Jelica Wedding Invitation">
   <meta id="ogDesc" property="og:description" content="We invite you to celebrate our special day. Click to open the invitation.">
@@ -26,9 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ============================================
-       Custom Fonts
-       ============================================ */
+    /* Custom Fonts */
     @font-face {
       font-family: 'ParfumerieScript';
       src: url('./Parfumerie/ParfumerieScriptRegular.otf') format('opentype');
@@ -44,9 +40,7 @@
       font-display: swap;
     }
 
-    /* ============================================
-       Variables
-       ============================================ */
+    /* Variables */
     :root {
       --bg-color: #fbf7ee;
       --bg-alt: #f4eee0;
@@ -58,9 +52,6 @@
       --font-sans: 'Marcellus', sans-serif;
     }
 
-    /* ============================================
-       Reset & Base Styles
-       ============================================ */
     * {
       margin: 0;
       padding: 0;
@@ -96,9 +87,7 @@
       padding: 50px 0;
     }
 
-    /* ============================================
-       Welcome Cover Screen (Overlay)
-       ============================================ */
+    /* Welcome Overlay */
     .welcome-overlay {
       position: fixed;
       top: 0;
@@ -144,9 +133,7 @@
       color: var(--text-dark);
     }
 
-    /* ============================================
-       Audio Floating Button
-       ============================================ */
+    /* Audio Button */
     .music-control-btn {
       position: fixed;
       bottom: 25px;
@@ -177,9 +164,7 @@
       fill: currentColor;
     }
 
-    /* ============================================
-       Scroll Animations (CSS Reveal)
-       ============================================ */
+    /* Reveal Animations */
     .reveal {
       opacity: 0;
       transform: translateY(35px);
@@ -196,9 +181,7 @@
     .delay-2 { transition-delay: 0.3s; }
     .delay-3 { transition-delay: 0.45s; }
 
-    /* ============================================
-       Layout Helpers
-       ============================================ */
+    /* Layout Helpers */
     .container {
       max-width: 1280px;
       margin: 0 auto;
@@ -225,9 +208,7 @@
       object-position: center;
     }
 
-    /* ============================================
-       Typography Helpers
-       ============================================ */
+    /* Typography Helpers */
     .script-font {
       font-family: var(--font-script);
       font-weight: 400;
@@ -251,9 +232,7 @@
       margin: 15px auto;
     }
 
-    /* ============================================
-       Buttons
-       ============================================ */
+    /* Buttons */
     .btn {
       display: inline-block;
       padding: 10px 28px;
@@ -274,9 +253,7 @@
       color: #fff;
     }
 
-    /* ============================================
-       1. Hero Section
-       ============================================ */
+    /* Sections */
     .hero-section {
       padding-top: 60px;
       padding-bottom: 40px;
@@ -300,9 +277,6 @@
       color: var(--text-muted);
     }
 
-    /* ============================================
-       2. Our Story Section
-       ============================================ */
     .our-story-section {
       height: 600px;
     }
@@ -339,9 +313,6 @@
       line-height: 1.7;
     }
 
-    /* ============================================
-       3. Ceremony Section
-       ============================================ */
     .ceremony-title {
       font-size: 5rem;
       margin-bottom: 10px;
@@ -371,7 +342,6 @@
       margin: 0 auto 25px auto;
     }
 
-    /* Dress Code */
     .dress-code-container {
       margin-top: 40px;
     }
@@ -401,9 +371,6 @@
       font-style: italic;
     }
 
-    /* ============================================
-       4. Love Gift Section
-       ============================================ */
     .gift-grid {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -455,9 +422,6 @@
       font-size: 0.65rem;
     }
 
-    /* ============================================
-       5. RSVP Section
-       ============================================ */
     .rsvp-section {
       max-width: 600px;
       margin: 0 auto;
@@ -500,8 +464,18 @@
       outline: none;
     }
 
+    textarea.form-input {
+      resize: vertical;
+      min-height: 90px;
+    }
+
     .form-input:focus {
       border-color: var(--text-dark);
+    }
+
+    .form-input:disabled {
+      background-color: #f0f0f0;
+      cursor: not-allowed;
     }
 
     .rsvp-submit-container {
@@ -517,9 +491,6 @@
       font-weight: 500;
     }
 
-    /* ============================================
-       6. Closing Section
-       ============================================ */
     .closing-section {
       padding: 60px 0;
     }
@@ -546,174 +517,40 @@
       margin-bottom: 25px;
     }
 
-    /* ============================================
-       Responsive Mobile
-       ============================================ */
     @media (max-width: 768px) {
-      section {
-        padding: 35px 0;
-      }
-
-      .container {
-        padding: 0 24px;
-      }
-
-      .welcome-title {
-        font-size: 6rem;
-      }
-
-      .hero-section {
-        padding-top: 40px;
-        padding-bottom: 25px;
-      }
-
-      .hero-title {
-        font-size: 10rem;
-        line-height: 1.1;
-        margin-bottom: 20px;
-      }
-
-      .hero-img-wrapper {
-        width: 100%;
-        max-width: 340px;
-        height: 190px;
-        margin: 25px auto;
-      }
-
-      .hero-subtitle {
-        font-size: 0.75rem;
-        letter-spacing: 0.5px;
-      }
-
-      .full-width-img-wrapper img {
-        max-height: 400px;
-      }
-
-      .our-story-section {
-        height: auto;
-      }
-
-      .our-story-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .story-title {
-        font-size: 4rem;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .story-content {
-        padding: 0;
-      }
-
-      .story-img-1, 
-      .story-img-2 {
-        height: auto;
-        width: 100%;
-      }
-
-      .story-img-1 img, 
-      .story-img-2 img {
-        height: 380px;
-        margin-top: 15px;
-      }
-
-      .story-text {
-        font-size: 0.8rem;
-        line-height: 1.6;
-      }
-
-      .ceremony-title {
-        font-size: 3.8rem;
-      }
-
-      .ceremony-date {
-        font-size: 1.4rem;
-      }
-
-      .ceremony-time {
-        font-size: 1.1rem;
-      }
-
-      .ceremony-venue {
-        font-size: 1.2rem;
-      }
-
-      .ceremony-address {
-        font-size: 0.85rem;
-        max-width: 300px;
-      }
-
-      .dress-code-title {
-        font-size: 3.2rem;
-      }
-
-      .palette-color {
-        width: 38px;
-        height: 38px;
-      }
-
-      .gift-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .gift-img-wrapper {
-        height: 380px;
-      }
-
-      .gift-title {
-        font-size: 4rem;
-        text-align: center;
-        margin-bottom: 25px;
-      }
-
-      .gift-info {
-        text-align: left;
-      }
-
-      .gift-block {
-        position: relative;
-        padding-bottom: 15px;
-        border-bottom: 1px solid var(--border-light);
-      }
-
-      .copy-btn {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        left: auto;
-        margin: 0;
-        padding: 6px 14px;
-        font-size: 0.6rem;
-      }
-
-      .rsvp-title {
-        font-size: 3.2rem;
-        text-align: center;
-      }
-
-      .rsvp-form {
-        padding: 20px 15px;
-        background: transparent;
-        border: none;
-      }
-
-      .closing-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .closing-img-wrapper {
-        height: 380px;
-      }
-
-      .closing-title {
-        font-size: 4rem;
-      }
+      section { padding: 35px 0; }
+      .container { padding: 0 24px; }
+      .welcome-title { font-size: 6rem; }
+      .hero-section { padding-top: 40px; padding-bottom: 25px; }
+      .hero-title { font-size: 10rem; line-height: 1.1; margin-bottom: 20px; }
+      .hero-img-wrapper { width: 100%; max-width: 340px; height: 190px; margin: 25px auto; }
+      .hero-subtitle { font-size: 0.75rem; letter-spacing: 0.5px; }
+      .full-width-img-wrapper img { max-height: 400px; }
+      .our-story-section { height: auto; }
+      .our-story-grid { grid-template-columns: 1fr; gap: 30px; }
+      .story-title { font-size: 4rem; text-align: center; margin-bottom: 20px; }
+      .story-content { padding: 0; }
+      .story-img-1, .story-img-2 { height: auto; width: 100%; }
+      .story-img-1 img, .story-img-2 img { height: 380px; margin-top: 15px; }
+      .story-text { font-size: 0.8rem; line-height: 1.6; }
+      .ceremony-title { font-size: 3.8rem; }
+      .ceremony-date { font-size: 1.4rem; }
+      .ceremony-time { font-size: 1.1rem; }
+      .ceremony-venue { font-size: 1.2rem; }
+      .ceremony-address { font-size: 0.85rem; max-width: 300px; }
+      .dress-code-title { font-size: 3.2rem; }
+      .palette-color { width: 38px; height: 38px; }
+      .gift-grid { grid-template-columns: 1fr; gap: 30px; }
+      .gift-img-wrapper { height: 380px; }
+      .gift-title { font-size: 4rem; text-align: center; margin-bottom: 25px; }
+      .gift-info { text-align: left; }
+      .gift-block { position: relative; padding-bottom: 15px; border-bottom: 1px solid var(--border-light); }
+      .copy-btn { position: absolute; right: 0; top: 50%; transform: translateY(-50%); left: auto; margin: 0; padding: 6px 14px; font-size: 0.6rem; }
+      .rsvp-title { font-size: 3.2rem; text-align: center; }
+      .rsvp-form { padding: 20px 15px; background: transparent; border: none; }
+      .closing-grid { grid-template-columns: 1fr; gap: 25px; }
+      .closing-img-wrapper { height: 380px; }
+      .closing-title { font-size: 4rem; }
     }
   </style>
 </head>
@@ -734,7 +571,7 @@
     </svg>
   </button>
 
-  <!-- 0. Welcome / Overlay Screen -->
+  <!-- Welcome Overlay Screen -->
   <div class="welcome-overlay" id="welcomeOverlay">
     <h1 class="welcome-title script-font">Egi & Jelica</h1>
     <div class="welcome-guest-box">
@@ -744,7 +581,7 @@
     <button class="btn" id="openInvitationBtn">OPEN INVITATION</button>
   </div>
 
-  <!-- 1. Hero Section -->
+  <!-- Hero Section -->
   <div class="container">
     <section class="hero-section">
       <h1 class="hero-title script-font reveal">Egi & Jelica</h1>
@@ -757,14 +594,14 @@
     </section>
   </div>
 
-  <!-- 2. Full Width Image 1 -->
+  <!-- Full Width Image 1 -->
   <section class="full-width-section reveal">
     <div class="full-width-img-wrapper">
-      <img src="./egijelica-2.jpeg" alt="Prewedding Full 1">
+      <img src="./egijelica-2.jpeg" alt="Prewedding Full 1" style="transform: scale(2) translateX(12%) translateY(-2%);">
     </div>
   </section>
 
-  <!-- 3. Our Story Section -->
+  <!-- Our Story Section -->
   <div class="section-alt">
     <div class="container">
       <section class="our-story-section">
@@ -778,7 +615,7 @@
             </p>
             <p class="story-text">QS Ar-Rum: 21</p>
             <br>
-            <img src="./egijelica-3.jpeg" alt="Story Image Left">
+            <img src="./egijelica-4.jpeg" alt="Story Image Left" style="object-position: center 65%;">
           </div>
 
           <div class="story-content reveal delay-1">
@@ -792,14 +629,14 @@
           </div>
 
           <div class="story-img-2 reveal delay-2">
-            <img src="./egijelica-4.jpeg" alt="Story Image Right">
+            <img src="./egijelica-3.jpeg" alt="Story Image Right" style="object-position: center 55%;">
           </div>
         </div>
       </section>
     </div>
   </div>
 
-  <!-- 4. The Ceremony & Dress Code -->
+  <!-- Ceremony & Dress Code -->
   <section class="reveal">
     <h2 class="ceremony-title script-font">The Ceremony</h2>
     <p class="ceremony-date">Saturday, August 8, 2026</p>
@@ -824,19 +661,19 @@
     </div>
   </section>
 
-  <!-- 5. Full Width Image 2 -->
+  <!-- Full Width Image 2 -->
   <section class="full-width-section reveal">
     <div class="full-width-img-wrapper">
-      <img src="./egijelica-5.jpeg" alt="Prewedding Full 2">
+      <img src="./egijelica-5.jpeg" alt="Prewedding Full 2" style="transform: scale(1.3);">
     </div>
   </section>
 
-  <!-- 6. Love Gift Section -->
+  <!-- Love Gift Section -->
   <div class="container">
     <section>
       <div class="gift-grid">
         <div class="gift-img-wrapper reveal">
-          <img src="./egijelica-6.jpeg" alt="Love Gift Image">
+          <img src="./egijelica-6.jpeg" alt="Love Gift Image" style="object-position: center 60%;">
         </div>
         <div class="gift-info reveal delay-1">
           <h2 class="gift-title script-font">Love Gift</h2>
@@ -859,50 +696,54 @@
     </section>
   </div>
 
-  <!-- 7. Confirm Attendance / RSVP -->
+  <!-- RSVP Section -->
   <div class="section-alt">
     <div class="container">
       <section class="rsvp-section reveal">
         <h2 class="rsvp-title script-font">Confirm Attendance</h2>
 
-        <form class="rsvp-form" onsubmit="event.preventDefault(); alert('Thank you for your confirmation!');">
-          <div class="form-group">
-            <label class="form-label" for="name">Full Name</label>
-            <input type="text" id="name" class="form-input" placeholder="Enter your name" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="guests">Number of Guests</label>
-            <input type="number" id="guests" class="form-input" placeholder="1" min="1" max="5" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="attendance">Attendance</label>
-            <select id="attendance" class="form-input" required>
-              <option value="" disabled selected>Please select</option>
-              <option value="Attending">Attending</option>
-              <option value="Not Attending">Not Attending</option>
-            </select>
-          </div>
-          <div class="rsvp-submit-container">
-            <button type="submit" class="btn rsvp-submit-btn">Send Confirmation</button>
-          </div>
+        <form class="rsvp-form" id="rsvpForm">
+            <div class="form-group">
+                <label class="form-label" for="name">Full Name</label>
+                <input type="text" id="name" class="form-input" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="guests">Number of Guests</label>
+                <input type="number" id="guests" class="form-input" placeholder="e.g. 2" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="attendance">Attendance</label>
+                <select id="attendance" class="form-input" required>
+                  <option value="" disabled selected>Please select</option>
+                  <option value="Attending">Attending</option>
+                  <option value="Not Attending">Not Attending</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="message">Wishes & Messages</label>
+                <textarea id="message" class="form-input" placeholder="Leave your warm wishes or message for the couple..." rows="3"></textarea>
+            </div>
+            <div class="rsvp-submit-container">
+                <button type="submit" id="rsvpSubmitBtn" class="btn rsvp-submit-btn">Send Confirmation</button>
+            </div>
         </form>
       </section>
     </div>
   </div>
 
-  <!-- 8. Full Width Image 3 -->
+  <!-- Full Width Image 3 -->
   <section class="full-width-section reveal">
     <div class="full-width-img-wrapper">
       <img src="./egijelica-7.jpeg" alt="Prewedding Full 3">
     </div>
   </section>
 
-  <!-- 9. Closing Section -->
+  <!-- Closing Section -->
   <div class="container">
     <section class="closing-section">
       <div class="closing-grid">
         <div class="closing-img-wrapper reveal">
-          <img src="./egijelica-8.jpeg" alt="Closing Image">
+          <img src="./egijelica-8.jpeg" alt="Closing Image" style="object-position: center 55%;">
         </div>
         <div class="closing-info reveal delay-1">
           <p>Your presence will truly make our day.</p>
@@ -914,12 +755,20 @@
 
   <!-- JavaScript Logics -->
   <script>
-    // 1. Get Guest Name from URL Parameter (?to=NamaTamu) & Update Dynamic Meta/Welcome
+    // 1. Get Guest Name from URL Parameter (?to=GuestName) & Update Dynamic Meta/Welcome/Input
     document.addEventListener("DOMContentLoaded", () => {
       const urlParams = new URLSearchParams(window.location.search);
       const guestName = urlParams.get('to');
       if (guestName) {
         const decodedName = decodeURIComponent(guestName);
+        
+        // Auto-fill field Name di RSVP Form
+        const nameInput = document.getElementById('name');
+        if (nameInput) {
+          nameInput.value = decodedName;
+        }
+
+        // Set Welcome Screen Guest Name
         document.getElementById('guestName').innerText = decodedName;
         
         // Dynamic Meta Tag Update
@@ -995,6 +844,57 @@
         alert('Copied to clipboard: ' + text);
       }).catch(err => {
         console.error('Failed to copy text: ', err);
+      });
+    }
+
+    // 5. RSVP Form Handler
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxK5jkFLwr0YFv-gWhCPCdTSA6uFxtAqSkYc5Tt5UB5vdDw8MCTpmeODH6yPdvieWqR8Q/exec';
+
+    const rsvpForm = document.getElementById('rsvpForm');
+    const rsvpSubmitBtn = document.getElementById('rsvpSubmitBtn');
+
+    if (rsvpForm) {
+      rsvpForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Visual feedback during submit
+        rsvpSubmitBtn.disabled = true;
+        rsvpSubmitBtn.innerText = 'SENDING...';
+
+        const formData = {
+          name: document.getElementById('name').value,
+          guests: document.getElementById('guests').value,
+          attendance: document.getElementById('attendance').value,
+          message: document.getElementById('message').value
+        };
+
+        fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        })
+        .then(() => {
+          // Disable button & show thank you message
+          rsvpSubmitBtn.disabled = true;
+          rsvpSubmitBtn.innerText = 'THANK YOU FOR YOUR CONFIRMATION';
+          rsvpSubmitBtn.style.cursor = 'not-allowed';
+          rsvpSubmitBtn.style.opacity = '0.7';
+
+          // Lock all form inputs
+          const inputs = rsvpForm.querySelectorAll('input, select, textarea');
+          inputs.forEach(input => input.disabled = true);
+        })
+        .catch((error) => {
+          console.error('Error!', error);
+          alert('Something went wrong. Please try again.');
+          
+          // Reset button state if submission failed
+          rsvpSubmitBtn.disabled = false;
+          rsvpSubmitBtn.innerText = 'SEND CONFIRMATION';
+        });
       });
     }
   </script>
