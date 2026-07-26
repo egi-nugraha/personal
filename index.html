@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Egi & Jelica Wedding Invitation</title>
 
+  <!-- ============================================
+       Meta Tags untuk Link Preview (WhatsApp, TG, FB)
+       ============================================ -->
+  <meta property="og:type" content="website">
+  <meta id="ogTitle" property="og:title" content="Egi & Jelica Wedding Invitation">
+  <meta id="ogDesc" property="og:description" content="We invite you to celebrate our special day. Click to open the invitation.">
+  <meta property="og:image" content="https://egi-nugraha.com/egijelica-1.jpeg">
+  <meta property="og:url" content="https://egi-nugraha.com/">
+
+  <!-- Twitter Card Meta Tag -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta id="twTitle" name="twitter:title" content="Egi & Jelica Wedding Invitation">
+  <meta id="twDesc" name="twitter:description" content="We invite you to celebrate our special day. Click to open the invitation.">
+  <meta name="twitter:image" content="https://egi-nugraha.com/egijelica-1.jpeg">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,12 +59,16 @@
     }
 
     /* ============================================
-       Reset
+       Reset & Base Styles
        ============================================ */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -59,6 +78,11 @@
       line-height: 1.6;
       text-align: center;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body.no-scroll {
+      overflow: hidden;
     }
 
     img {
@@ -71,6 +95,106 @@
     section {
       padding: 50px 0;
     }
+
+    /* ============================================
+       Welcome Cover Screen (Overlay)
+       ============================================ */
+    .welcome-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--bg-color);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    .welcome-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .welcome-title {
+      font-size: 6rem;
+      margin-bottom: 20px;
+    }
+
+    .welcome-guest-box {
+      margin: 25px 0 35px 0;
+    }
+
+    .welcome-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .welcome-guest-name {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    /* ============================================
+       Audio Floating Button
+       ============================================ */
+    .music-control-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 44px;
+      height: 44px;
+      background-color: rgba(43, 43, 43, 0.85);
+      color: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 9000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .music-control-btn:hover {
+      transform: scale(1.08);
+      background-color: var(--text-dark);
+    }
+
+    .music-control-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* ============================================
+       Scroll Animations (CSS Reveal)
+       ============================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: 0.15s; }
+    .delay-2 { transition-delay: 0.3s; }
+    .delay-3 { transition-delay: 0.45s; }
 
     /* ============================================
        Layout Helpers
@@ -394,13 +518,13 @@
     }
 
     /* ============================================
-       6. Closing Section (two columns: image + text)
+       6. Closing Section
        ============================================ */
     .closing-section {
       padding: 60px 0;
     }
 
-     .closing-grid {
+    .closing-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 100px;
@@ -414,7 +538,7 @@
     }
 
     .closing-info {
-        text-align: center;
+      text-align: center;
     }
     
     .closing-title {
@@ -423,142 +547,140 @@
     }
 
     /* ============================================
-       Responsive
+       Responsive Mobile
        ============================================ */
     @media (max-width: 768px) {
-    /* Layout General */
-    section {
+      section {
         padding: 35px 0;
-    }
+      }
 
-    .container {
+      .container {
         padding: 0 24px;
-    }
+      }
 
-    /* 1. Hero Section */
-    .hero-section {
+      .welcome-title {
+        font-size: 6rem;
+      }
+
+      .hero-section {
         padding-top: 40px;
         padding-bottom: 25px;
-    }
+      }
 
-    .hero-title {
+      .hero-title {
         font-size: 10rem;
         line-height: 1.1;
         margin-bottom: 20px;
-    }
+      }
 
-    .hero-img-wrapper {
+      .hero-img-wrapper {
         width: 100%;
         max-width: 340px;
         height: 190px;
         margin: 25px auto;
-    }
+      }
 
-    .hero-subtitle {
+      .hero-subtitle {
         font-size: 0.75rem;
         letter-spacing: 0.5px;
-    }
+      }
 
-    /* Full Width Images */
-    .full-width-img-wrapper img {
+      .full-width-img-wrapper img {
         max-height: 400px;
-    }
+      }
 
-    /* 2. Our Story Section */
-    .our-story-section {
-        height: auto; /* Fix overflow pada mobile */
-    }
+      .our-story-section {
+        height: auto;
+      }
 
-    .our-story-grid {
+      .our-story-grid {
         grid-template-columns: 1fr;
         gap: 30px;
-    }
+      }
 
-    .story-title {
+      .story-title {
         font-size: 4rem;
         text-align: center;
         margin-bottom: 20px;
-    }
+      }
 
-    .story-content {
+      .story-content {
         padding: 0;
-    }
+      }
 
-    .story-img-1, 
-    .story-img-2 {
+      .story-img-1, 
+      .story-img-2 {
         height: auto;
         width: 100%;
-    }
+      }
 
-    .story-img-1 img, 
-    .story-img-2 img {
+      .story-img-1 img, 
+      .story-img-2 img {
         height: 380px;
         margin-top: 15px;
-    }
+      }
 
-    .story-text {
+      .story-text {
         font-size: 0.8rem;
         line-height: 1.6;
-    }
+      }
 
-    /* 3. Ceremony & Dress Code */
-    .ceremony-title {
+      .ceremony-title {
         font-size: 3.8rem;
-    }
+      }
 
-    .ceremony-date {
+      .ceremony-date {
         font-size: 1.4rem;
-    }
+      }
 
-    .ceremony-time {
+      .ceremony-time {
         font-size: 1.1rem;
-    }
+      }
 
-    .ceremony-venue {
+      .ceremony-venue {
         font-size: 1.2rem;
-    }
+      }
 
-    .ceremony-address {
+      .ceremony-address {
         font-size: 0.85rem;
         max-width: 300px;
-    }
+      }
 
-    .dress-code-title {
+      .dress-code-title {
         font-size: 3.2rem;
-    }
+      }
 
-    .palette-color {
+      .palette-color {
         width: 38px;
         height: 38px;
-    }
+      }
 
-    /* 4. Love Gift Section */
-    .gift-grid {
+      .gift-grid {
         grid-template-columns: 1fr;
         gap: 30px;
-    }
+      }
 
-    .gift-img-wrapper {
+      .gift-img-wrapper {
         height: 380px;
-    }
+      }
 
-    .gift-title {
+      .gift-title {
         font-size: 4rem;
         text-align: center;
         margin-bottom: 25px;
-    }
+      }
 
-    .gift-info {
+      .gift-info {
         text-align: left;
-    }
+      }
 
-    .gift-block {
+      .gift-block {
         position: relative;
         padding-bottom: 15px;
         border-bottom: 1px solid var(--border-light);
-    }
+      }
 
-    .copy-btn {
+      .copy-btn {
         position: absolute;
         right: 0;
         top: 50%;
@@ -567,53 +689,76 @@
         margin: 0;
         padding: 6px 14px;
         font-size: 0.6rem;
-    }
+      }
 
-    /* 5. RSVP Section */
-    .rsvp-title {
+      .rsvp-title {
         font-size: 3.2rem;
         text-align: center;
-    }
+      }
 
-    .rsvp-form {
+      .rsvp-form {
         padding: 20px 15px;
         background: transparent;
         border: none;
-    }
+      }
 
-    /* 6. Closing Section */
-    .closing-grid {
+      .closing-grid {
         grid-template-columns: 1fr;
         gap: 25px;
-    }
+      }
 
-    .closing-img-wrapper {
+      .closing-img-wrapper {
         height: 380px;
-    }
+      }
 
-    .closing-title {
+      .closing-title {
         font-size: 4rem;
-    }
+      }
     }
   </style>
 </head>
-<body>
+<body class="no-scroll">
+
+  <!-- Background Music Element -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="./bg-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Audio Control Button -->
+  <button id="musicToggle" class="music-control-btn" aria-label="Toggle Audio">
+    <svg id="musicIconPlay" viewBox="0 0 24 24">
+      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+    </svg>
+    <svg id="musicIconPause" viewBox="0 0 24 24" style="display: none;">
+      <path d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 3.83 0 4-3.83v-1.17l4.73 4.73L20.73 20 4.27 3zM14 7h4V3h-6v5.18l2 2V7z"/>
+    </svg>
+  </button>
+
+  <!-- 0. Welcome / Overlay Screen -->
+  <div class="welcome-overlay" id="welcomeOverlay">
+    <h1 class="welcome-title script-font">Egi & Jelica</h1>
+    <div class="welcome-guest-box">
+      <p class="welcome-label">Dear Special Guest,</p>
+      <p class="welcome-guest-name" id="guestName">Guest</p>
+    </div>
+    <button class="btn" id="openInvitationBtn">OPEN INVITATION</button>
+  </div>
 
   <!-- 1. Hero Section -->
   <div class="container">
     <section class="hero-section">
-      <h1 class="hero-title script-font">Egi & Jelica</h1>
-      <div class="hero-img-wrapper">
+      <h1 class="hero-title script-font reveal">Egi & Jelica</h1>
+      <div class="hero-img-wrapper reveal delay-1">
         <img src="./egijelica-1.jpeg" alt="Egi & Jelica Prewedding">
       </div>
-      <p class="hero-subtitle">
+      <p class="hero-subtitle reveal delay-2">
         With hearts full of joy, <br>we invite you to be part of our special moment.
       </p>
     </section>
   </div>
 
   <!-- 2. Full Width Image 1 -->
-  <section class="full-width-section">
+  <section class="full-width-section reveal">
     <div class="full-width-img-wrapper">
       <img src="./egijelica-2.jpeg" alt="Prewedding Full 1">
     </div>
@@ -624,7 +769,7 @@
     <div class="container">
       <section class="our-story-section">
         <div class="our-story-grid">
-          <div class="story-img-1">
+          <div class="story-img-1 reveal">
             <p class="story-text" style="text-align: center;">
               وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةًوَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
             </p>
@@ -636,7 +781,7 @@
             <img src="./egijelica-3.jpeg" alt="Story Image Left">
           </div>
 
-          <div class="story-content">
+          <div class="story-content reveal delay-1">
             <h2 class="story-title script-font">Our Story</h2>
             <p class="story-text" style="text-align: justify;">
               We believe that some hearts are connected long before they ever cross paths.
@@ -646,7 +791,7 @@
             </p>
           </div>
 
-          <div class="story-img-2">
+          <div class="story-img-2 reveal delay-2">
             <img src="./egijelica-4.jpeg" alt="Story Image Right">
           </div>
         </div>
@@ -655,7 +800,7 @@
   </div>
 
   <!-- 4. The Ceremony & Dress Code -->
-  <section>
+  <section class="reveal">
     <h2 class="ceremony-title script-font">The Ceremony</h2>
     <p class="ceremony-date">Saturday, August 8, 2026</p>
     <p class="ceremony-time">13:00 - 17:00 WIB</p>
@@ -666,7 +811,7 @@
     </p>
     <a href="https://maps.app.goo.gl/qNW1Fu2QTBDg1ofJ8" target="_blank" class="btn">OPEN MAPS</a>
 
-    <div class="dress-code-container">
+    <div class="dress-code-container reveal delay-1">
       <h3 class="dress-code-title script-font">Dress Code</h3>
       <ul class="palette-list">
         <li class="palette-color" style="background-color: #2F3E33;"></li>
@@ -680,7 +825,7 @@
   </section>
 
   <!-- 5. Full Width Image 2 -->
-  <section class="full-width-section">
+  <section class="full-width-section reveal">
     <div class="full-width-img-wrapper">
       <img src="./egijelica-5.jpeg" alt="Prewedding Full 2">
     </div>
@@ -690,10 +835,10 @@
   <div class="container">
     <section>
       <div class="gift-grid">
-        <div class="gift-img-wrapper">
+        <div class="gift-img-wrapper reveal">
           <img src="./egijelica-6.jpeg" alt="Love Gift Image">
         </div>
-        <div class="gift-info">
+        <div class="gift-info reveal delay-1">
           <h2 class="gift-title script-font">Love Gift</h2>
 
           <div class="gift-block">
@@ -717,7 +862,7 @@
   <!-- 7. Confirm Attendance / RSVP -->
   <div class="section-alt">
     <div class="container">
-      <section class="rsvp-section">
+      <section class="rsvp-section reveal">
         <h2 class="rsvp-title script-font">Confirm Attendance</h2>
 
         <form class="rsvp-form" onsubmit="event.preventDefault(); alert('Thank you for your confirmation!');">
@@ -746,30 +891,108 @@
   </div>
 
   <!-- 8. Full Width Image 3 -->
-  <section class="full-width-section">
+  <section class="full-width-section reveal">
     <div class="full-width-img-wrapper">
       <img src="./egijelica-7.jpeg" alt="Prewedding Full 3">
     </div>
   </section>
 
-  <!-- 9. Closing Section (two columns) -->
+  <!-- 9. Closing Section -->
   <div class="container">
     <section class="closing-section">
       <div class="closing-grid">
-        <div class="closing-img-wrapper">
+        <div class="closing-img-wrapper reveal">
           <img src="./egijelica-8.jpeg" alt="Closing Image">
         </div>
-        <div class="closing-info">
+        <div class="closing-info reveal delay-1">
           <p>Your presence will truly make our day.</p>
-          <h2 class="closing-title script-font">Love Gift</h2>
+          <h2 class="closing-title script-font">Thank You</h2>
         </div>
       </div>
+    </section>
   </div>
 
+  <!-- JavaScript Logics -->
   <script>
+    // 1. Get Guest Name from URL Parameter (?to=NamaTamu) & Update Dynamic Meta/Welcome
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const guestName = urlParams.get('to');
+      if (guestName) {
+        const decodedName = decodeURIComponent(guestName);
+        document.getElementById('guestName').innerText = decodedName;
+        
+        // Dynamic Meta Tag Update
+        const customTitle = `Wedding Invitation for ${decodedName} - Egi & Jelica`;
+        const customDesc = `Dear ${decodedName}, you are cordially invited to celebrate our wedding. Click to view invitation.`;
+
+        document.title = customTitle;
+        document.getElementById('ogTitle').setAttribute('content', customTitle);
+        document.getElementById('ogDesc').setAttribute('content', customDesc);
+        document.getElementById('twTitle').setAttribute('content', customTitle);
+        document.getElementById('twDesc').setAttribute('content', customDesc);
+      }
+    });
+
+    // 2. Music Player & Welcome Gate Control
+    const bgMusic = document.getElementById('bgMusic');
+    const welcomeOverlay = document.getElementById('welcomeOverlay');
+    const openInvitationBtn = document.getElementById('openInvitationBtn');
+    const musicToggle = document.getElementById('musicToggle');
+    const musicIconPlay = document.getElementById('musicIconPlay');
+    const musicIconPause = document.getElementById('musicIconPause');
+
+    let isPlaying = false;
+
+    function playAudio() {
+      bgMusic.play().then(() => {
+        isPlaying = true;
+        musicIconPlay.style.display = 'block';
+        musicIconPause.style.display = 'none';
+      }).catch(err => console.log("Autoplay blocked:", err));
+    }
+
+    function pauseAudio() {
+      bgMusic.pause();
+      isPlaying = false;
+      musicIconPlay.style.display = 'none';
+      musicIconPause.style.display = 'block';
+    }
+
+    openInvitationBtn.addEventListener('click', () => {
+      welcomeOverlay.classList.add('hidden');
+      document.body.classList.remove('no-scroll');
+      playAudio();
+      triggerScrollAnimations();
+    });
+
+    musicToggle.addEventListener('click', () => {
+      if (isPlaying) {
+        pauseAudio();
+      } else {
+        playAudio();
+      }
+    });
+
+    // 3. Scroll Reveal Animation Logic
+    function triggerScrollAnimations() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, {
+        threshold: 0.15
+      });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
+    // 4. Copy to Clipboard Function
     function copyToClipboard(text) {
       navigator.clipboard.writeText(text).then(() => {
-        // Copied successfully
+        alert('Copied to clipboard: ' + text);
       }).catch(err => {
         console.error('Failed to copy text: ', err);
       });
