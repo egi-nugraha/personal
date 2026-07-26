@@ -1,8 +1,779 @@
-<div style="position: relative; width: 100%; height: 0; padding-top: 506.0029%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAHQXfqhjTU/6JWll0QE2LunzGsnjLeABg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHQXfqhjTU&#x2F;6JWll0QE2LunzGsnjLeABg&#x2F;view?utm_content=DAHQXfqhjTU&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Egi Nugraha &amp; Nonna Jelica ~ Intimate Wedding Invitation</a> by NONNA JELICA
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egi & Jelica Wedding Invitation</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       Custom Fonts
+       ============================================ */
+    @font-face {
+      font-family: 'ParfumerieScript';
+      src: url('./Parfumerie/ParfumerieScriptRegular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Marcellus';
+      src: url('./Marcellus/Marcellus-Regular.ttf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ============================================
+       Variables
+       ============================================ */
+    :root {
+      --bg-color: #fbf7ee;
+      --bg-alt: #f4eee0;
+      --text-dark: #2B2B2B;
+      --text-muted: #2B2B2B;
+      --border-light: #E2DDD5;
+      --font-script: 'ParfumerieScript', cursive;
+      --font-serif: 'Marcellus', serif;
+      --font-sans: 'Marcellus', sans-serif;
+    }
+
+    /* ============================================
+       Reset
+       ============================================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-serif);
+      background-color: var(--bg-color);
+      color: var(--text-dark);
+      line-height: 1.6;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    /* ============================================
+       Layout Helpers
+       ============================================ */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-alt {
+      background-color: var(--bg-alt);
+    }
+
+    .full-width-section {
+      width: 100%;
+      padding: 0;
+    }
+
+    .full-width-img-wrapper {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .full-width-img-wrapper img {
+      max-height: 750px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* ============================================
+       Typography Helpers
+       ============================================ */
+    .script-font {
+      font-family: var(--font-script);
+      font-weight: 400;
+      color: var(--text-dark);
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+    }
+
+    .serif-font {
+      font-family: var(--font-serif);
+    }
+
+    .sans-font {
+      font-family: var(--font-sans);
+    }
+
+    .divider-line {
+      width: 40px;
+      height: 1px;
+      background-color: #888;
+      margin: 15px auto;
+    }
+
+    /* ============================================
+       Buttons
+       ============================================ */
+    .btn {
+      display: inline-block;
+      padding: 10px 28px;
+      border: 1px solid var(--text-dark);
+      background: transparent;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--text-dark);
+      color: #fff;
+    }
+
+    /* ============================================
+       1. Hero Section
+       ============================================ */
+    .hero-section {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    .hero-title {
+      font-size: 14rem;
+      margin-bottom: 25px;
+    }
+
+    .hero-img-wrapper {
+      width: 500px;
+      height: 250px;
+      margin: 40px auto;
+      overflow: hidden;
+    }
+
+    .hero-subtitle {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ============================================
+       2. Our Story Section
+       ============================================ */
+    .our-story-section {
+      height: 600px;
+    }
+
+    .our-story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 100px;
+    }
+
+    .story-img-1 {
+      height: 300px;
+      width: 100%;
+    }
+
+    .story-img-2 {
+      height: 480px;
+      width: 100%;
+    }
+
+    .story-content {
+      padding: 0 10px;
+    }
+
+    .story-title {
+      font-size: 6rem;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .story-text {
+      font-size: 0.8rem;
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       3. Ceremony Section
+       ============================================ */
+    .ceremony-title {
+      font-size: 5rem;
+      margin-bottom: 10px;
+    }
+
+    .ceremony-date {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .ceremony-time {
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 15px;
+    }
+
+    .ceremony-venue {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .ceremony-address {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin: 0 auto 25px auto;
+    }
+
+    /* Dress Code */
+    .dress-code-container {
+      margin-top: 40px;
+    }
+
+    .dress-code-title {
+      font-size: 4rem;
+      margin-bottom: 15px;
+    }
+
+    .palette-list {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      list-style: none;
+      margin: 15px 0;
+    }
+
+    .palette-color {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+
+    .dress-code-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ============================================
+       4. Love Gift Section
+       ============================================ */
+    .gift-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 100px;
+      align-items: center;
+      text-align: left;
+    }
+
+    .gift-img-wrapper {
+      height: 380px;
+      width: 100%;
+    }
+
+    .gift-title {
+      font-size: 5rem;
+      margin-bottom: 25px;
+    }
+
+    .gift-block {
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .gift-label {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .gift-value {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .gift-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .copy-btn {
+      position: absolute;
+      left: 130px;
+      top: 23px;
+      padding: 4px 12px;
+      font-size: 0.65rem;
+    }
+
+    /* ============================================
+       5. RSVP Section
+       ============================================ */
+    .rsvp-section {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .rsvp-title {
+      font-size: 3.8rem;
+      margin-bottom: 20px;
+    }
+
+    .rsvp-form {
+      text-align: left;
+      background: rgba(255, 255, 255, 0.4);
+      padding: 30px;
+      border: 1px solid var(--border-light);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border-light);
+      background: #fff;
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-color: var(--text-dark);
+    }
+
+    .rsvp-submit-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .rsvp-submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: #fff;
+      border: 1px solid var(--text-dark);
+      font-weight: 500;
+    }
+
+    /* ============================================
+       6. Closing Section (two columns: image + text)
+       ============================================ */
+    .closing-section {
+      padding: 60px 0;
+    }
+
+     .closing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+      text-align: left;
+    }
+
+    .closing-img-wrapper {
+      height: 380px;
+      width: 100%;
+    }
+
+    .closing-info {
+        text-align: center;
+    }
+    
+    .closing-title {
+      font-size: 5rem;
+      margin-bottom: 25px;
+    }
+
+    /* ============================================
+       Responsive
+       ============================================ */
+    @media (max-width: 768px) {
+    /* Layout General */
+    section {
+        padding: 35px 0;
+    }
+
+    .container {
+        padding: 0 24px;
+    }
+
+    /* 1. Hero Section */
+    .hero-section {
+        padding-top: 40px;
+        padding-bottom: 25px;
+    }
+
+    .hero-title {
+        font-size: 10rem;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+
+    .hero-img-wrapper {
+        width: 100%;
+        max-width: 340px;
+        height: 190px;
+        margin: 25px auto;
+    }
+
+    .hero-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Full Width Images */
+    .full-width-img-wrapper img {
+        max-height: 400px;
+    }
+
+    /* 2. Our Story Section */
+    .our-story-section {
+        height: auto; /* Fix overflow pada mobile */
+    }
+
+    .our-story-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .story-title {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .story-content {
+        padding: 0;
+    }
+
+    .story-img-1, 
+    .story-img-2 {
+        height: auto;
+        width: 100%;
+    }
+
+    .story-img-1 img, 
+    .story-img-2 img {
+        height: 380px;
+        margin-top: 15px;
+    }
+
+    .story-text {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    /* 3. Ceremony & Dress Code */
+    .ceremony-title {
+        font-size: 3.8rem;
+    }
+
+    .ceremony-date {
+        font-size: 1.4rem;
+    }
+
+    .ceremony-time {
+        font-size: 1.1rem;
+    }
+
+    .ceremony-venue {
+        font-size: 1.2rem;
+    }
+
+    .ceremony-address {
+        font-size: 0.85rem;
+        max-width: 300px;
+    }
+
+    .dress-code-title {
+        font-size: 3.2rem;
+    }
+
+    .palette-color {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* 4. Love Gift Section */
+    .gift-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .gift-img-wrapper {
+        height: 380px;
+    }
+
+    .gift-title {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .gift-info {
+        text-align: left;
+    }
+
+    .gift-block {
+        position: relative;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .copy-btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        left: auto;
+        margin: 0;
+        padding: 6px 14px;
+        font-size: 0.6rem;
+    }
+
+    /* 5. RSVP Section */
+    .rsvp-title {
+        font-size: 3.2rem;
+        text-align: center;
+    }
+
+    .rsvp-form {
+        padding: 20px 15px;
+        background: transparent;
+        border: none;
+    }
+
+    /* 6. Closing Section */
+    .closing-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .closing-img-wrapper {
+        height: 380px;
+    }
+
+    .closing-title {
+        font-size: 4rem;
+    }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Hero Section -->
+  <div class="container">
+    <section class="hero-section">
+      <h1 class="hero-title script-font">Egi & Jelica</h1>
+      <div class="hero-img-wrapper">
+        <img src="./egijelica-1.jpeg" alt="Egi & Jelica Prewedding">
+      </div>
+      <p class="hero-subtitle">
+        With hearts full of joy, <br>we invite you to be part of our special moment.
+      </p>
+    </section>
+  </div>
+
+  <!-- 2. Full Width Image 1 -->
+  <section class="full-width-section">
+    <div class="full-width-img-wrapper">
+      <img src="./egijelica-2.jpeg" alt="Prewedding Full 1">
+    </div>
+  </section>
+
+  <!-- 3. Our Story Section -->
+  <div class="section-alt">
+    <div class="container">
+      <section class="our-story-section">
+        <div class="our-story-grid">
+          <div class="story-img-1">
+            <p class="story-text" style="text-align: center;">
+              وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةًوَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
+            </p>
+            <p class="story-text" style="text-align: justify;">
+              And one of His signs is that He created for you spouses from among yourselves so that you may find comfort in them. And He has placed between you compassion and mercy. Surely in this are signs for people who reflect.
+            </p>
+            <p class="story-text">QS Ar-Rum: 21</p>
+            <br>
+            <img src="./egijelica-3.jpeg" alt="Story Image Left">
+          </div>
+
+          <div class="story-content">
+            <h2 class="story-title script-font">Our Story</h2>
+            <p class="story-text" style="text-align: justify;">
+              We believe that some hearts are connected long before they ever cross paths.
+              <br><br>Before our story began, Allah was already writing it, allowing each of us to grow, to heal, to discover ourselves and to become ready for the love we were meant to share.
+              <br><br>Maybe we had passed one another without knowing. Maybe our paths had crossed in places we'll never remember.
+              <br><br>And then, at the perfect time, our story finally began. Because true love is never a coincidence, it is a beautiful journey guided by Allah's perfect timing.
+            </p>
+          </div>
+
+          <div class="story-img-2">
+            <img src="./egijelica-4.jpeg" alt="Story Image Right">
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- 4. The Ceremony & Dress Code -->
+  <section>
+    <h2 class="ceremony-title script-font">The Ceremony</h2>
+    <p class="ceremony-date">Saturday, August 8, 2026</p>
+    <p class="ceremony-time">13:00 - 17:00 WIB</p>
+    <div class="divider-line"></div>
+    <p class="ceremony-venue">D'King Café & Restaurant</p>
+    <p class="ceremony-address">
+      Jl. Pejuang 45 No.55, Karanganyar, Kec. Subang, Kabupaten Subang, Jawa Barat 41211
+    </p>
+    <a href="https://maps.app.goo.gl/qNW1Fu2QTBDg1ofJ8" target="_blank" class="btn">OPEN MAPS</a>
+
+    <div class="dress-code-container">
+      <h3 class="dress-code-title script-font">Dress Code</h3>
+      <ul class="palette-list">
+        <li class="palette-color" style="background-color: #2F3E33;"></li>
+        <li class="palette-color" style="background-color: #5B685D;"></li>
+        <li class="palette-color" style="background-color: #C1B098;"></li>
+        <li class="palette-color" style="background-color: #7D5C4B;"></li>
+        <li class="palette-color" style="background-color: #3E2723;"></li>
+      </ul>
+      <p class="dress-code-note">We kindly request that you wear formal and neat attire in accordance with the dress code.</p>
+    </div>
+  </section>
+
+  <!-- 5. Full Width Image 2 -->
+  <section class="full-width-section">
+    <div class="full-width-img-wrapper">
+      <img src="./egijelica-5.jpeg" alt="Prewedding Full 2">
+    </div>
+  </section>
+
+  <!-- 6. Love Gift Section -->
+  <div class="container">
+    <section>
+      <div class="gift-grid">
+        <div class="gift-img-wrapper">
+          <img src="./egijelica-6.jpeg" alt="Love Gift Image">
+        </div>
+        <div class="gift-info">
+          <h2 class="gift-title script-font">Love Gift</h2>
+
+          <div class="gift-block">
+            <p class="gift-label">Bank Transfer</p>
+            <p class="gift-value">BCA: 0551591173</p>
+            <p class="gift-sub">a.n Egi Nugraha</p>
+            <button class="btn copy-btn" onclick="copyToClipboard('0551591173')">Copy [0551591173]</button>
+          </div>
+
+          <div class="gift-block">
+            <p class="gift-label">Bank Transfer</p>
+            <p class="gift-value">BSI: 7283486596</p>
+            <p class="gift-sub">a.n Nonna Jelica</p>
+            <button class="btn copy-btn" onclick="copyToClipboard('7283486596')">Copy [7283486596]</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 7. Confirm Attendance / RSVP -->
+  <div class="section-alt">
+    <div class="container">
+      <section class="rsvp-section">
+        <h2 class="rsvp-title script-font">Confirm Attendance</h2>
+
+        <form class="rsvp-form" onsubmit="event.preventDefault(); alert('Thank you for your confirmation!');">
+          <div class="form-group">
+            <label class="form-label" for="name">Full Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="guests">Number of Guests</label>
+            <input type="number" id="guests" class="form-input" placeholder="1" min="1" max="5" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="attendance">Attendance</label>
+            <select id="attendance" class="form-input" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="Attending">Attending</option>
+              <option value="Not Attending">Not Attending</option>
+            </select>
+          </div>
+          <div class="rsvp-submit-container">
+            <button type="submit" class="btn rsvp-submit-btn">Send Confirmation</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <!-- 8. Full Width Image 3 -->
+  <section class="full-width-section">
+    <div class="full-width-img-wrapper">
+      <img src="./egijelica-7.jpeg" alt="Prewedding Full 3">
+    </div>
+  </section>
+
+  <!-- 9. Closing Section (two columns) -->
+  <div class="container">
+    <section class="closing-section">
+      <div class="closing-grid">
+        <div class="closing-img-wrapper">
+          <img src="./egijelica-8.jpeg" alt="Closing Image">
+        </div>
+        <div class="closing-info">
+          <p>Your presence will truly make our day.</p>
+          <h2 class="closing-title script-font">Love Gift</h2>
+        </div>
+      </div>
+  </div>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        // Copied successfully
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    }
+  </script>
+</body>
+</html>
