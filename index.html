@@ -9,14 +9,14 @@
   <meta property="og:type" content="website">
   <meta id="ogTitle" property="og:title" content="Egi & Jelica Wedding Invitation">
   <meta id="ogDesc" property="og:description" content="We invite you to celebrate our special day. Click to open the invitation.">
-  <meta property="og:image" content="https://egi-nugraha.com/egijelica-1.jpeg">
+  <meta property="og:image" content="https://egi-nugraha.com/egijelica-cover.jpeg">
   <meta property="og:url" content="https://egi-nugraha.com/">
 
   <!-- Twitter Card Meta Tag -->
   <meta name="twitter:card" content="summary_large_image">
   <meta id="twTitle" name="twitter:title" content="Egi & Jelica Wedding Invitation">
   <meta id="twDesc" name="twitter:description" content="We invite you to celebrate our special day. Click to open the invitation.">
-  <meta name="twitter:image" content="https://egi-nugraha.com/egijelica-1.jpeg">
+  <meta name="twitter:image" content="https://egi-nugraha.com/egijelica-cover.jpeg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,6 +50,10 @@
       --font-script: 'ParfumerieScript', cursive;
       --font-serif: 'Marcellus', serif;
       --font-sans: 'Marcellus', sans-serif;
+
+      /* Theme-matched Yes/No Accent Colors */
+      --color-yes: #4A6B53; /* Muted Sage Green */
+      --color-no: #8C4A43;  /* Muted Terracotta Red */
     }
 
     * {
@@ -253,7 +257,14 @@
       color: #fff;
     }
 
-    /* Sections */
+    .ceremony-action-btns {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* Hero Section */
     .hero-section {
       padding-top: 60px;
       padding-bottom: 40px;
@@ -277,6 +288,7 @@
       color: var(--text-muted);
     }
 
+    /* Our Story Section */
     .our-story-section {
       height: 600px;
     }
@@ -313,6 +325,7 @@
       line-height: 1.7;
     }
 
+    /* Ceremony Section & Countdown */
     .ceremony-title {
       font-size: 5rem;
       margin-bottom: 10px;
@@ -342,6 +355,40 @@
       margin: 0 auto 25px auto;
     }
 
+    .countdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px auto 35px auto;
+      max-width: 500px;
+      padding: 0 30px;
+    }
+
+    .countdown-box {
+      flex: 1;
+      padding: 15px 10px;
+      border: 1px solid var(--border-light);
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 4px;
+    }
+
+    .countdown-number {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--text-dark);
+    }
+
+    .countdown-label {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* Dress Code */
     .dress-code-container {
       margin-top: 40px;
     }
@@ -369,8 +416,10 @@
       font-size: 0.85rem;
       color: var(--text-muted);
       font-style: italic;
+      padding: 0 40px;
     }
 
+    /* Love Gift */
     .gift-grid {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -422,6 +471,7 @@
       font-size: 0.65rem;
     }
 
+    /* RSVP Section */
     .rsvp-section {
       max-width: 600px;
       margin: 0 auto;
@@ -478,6 +528,61 @@
       cursor: not-allowed;
     }
 
+    /* Custom Attendance Selection Cards */
+    .attendance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .attendance-option {
+      position: relative;
+    }
+
+    .attendance-option input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .attendance-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 15px;
+      border: 1px solid var(--border-light);
+      background-color: #fff;
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    /* Selected State - Yes (Muted Green) */
+    .attendance-option input[value="Yes"]:checked + .attendance-card {
+      background-color: var(--color-yes);
+      color: #ffffff;
+      border-color: var(--color-yes);
+    }
+
+    /* Selected State - No (Muted Red) */
+    .attendance-option input[value="No"]:checked + .attendance-card {
+      background-color: var(--color-no);
+      color: #ffffff;
+      border-color: var(--color-no);
+    }
+
+    .attendance-option input[type="radio"]:disabled + .attendance-card {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
     .rsvp-submit-container {
       text-align: center;
       margin-top: 30px;
@@ -491,6 +596,7 @@
       font-weight: 500;
     }
 
+    /* Closing Section */
     .closing-section {
       padding: 60px 0;
     }
@@ -538,6 +644,12 @@
       .ceremony-time { font-size: 1.1rem; }
       .ceremony-venue { font-size: 1.2rem; }
       .ceremony-address { font-size: 0.85rem; max-width: 300px; }
+      .countdown-container { gap: 10px; margin: 25px auto; }
+      .countdown-box { padding: 10px 5px; }
+      .countdown-number { font-size: 1.5rem; }
+      .countdown-label { font-size: 0.55rem; letter-spacing: 1px; }
+      .ceremony-action-btns { flex-direction: column; align-items: center; gap: 10px; }
+      .ceremony-action-btns .btn { width: 100%; max-width: 280px; }
       .dress-code-title { font-size: 3.2rem; }
       .palette-color { width: 38px; height: 38px; }
       .gift-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -615,7 +727,7 @@
             </p>
             <p class="story-text">QS Ar-Rum: 21</p>
             <br>
-            <img src="./egijelica-4.jpeg" alt="Story Image Left" style="object-position: center 65%;">
+            <img src="./egijelica-4.jpeg" alt="Story Image Left">
           </div>
 
           <div class="story-content reveal delay-1">
@@ -629,24 +741,53 @@
           </div>
 
           <div class="story-img-2 reveal delay-2">
-            <img src="./egijelica-3.jpeg" alt="Story Image Right" style="object-position: center 55%;">
+            <img src="./egijelica-3.jpeg" alt="Story Image Right" >
           </div>
         </div>
       </section>
     </div>
   </div>
 
-  <!-- Ceremony & Dress Code -->
+  <!-- Ceremony & Dress Code Section -->
   <section class="reveal">
     <h2 class="ceremony-title script-font">The Ceremony</h2>
     <p class="ceremony-date">Saturday, August 8, 2026</p>
     <p class="ceremony-time">13:00 - 17:00 WIB</p>
+    
+    <!-- Countdown Timer -->
+    <div class="countdown-container">
+      <div class="countdown-box">
+        <div class="countdown-number" id="cdDays">00</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-number" id="cdHours">00</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-number" id="cdMinutes">00</div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-number" id="cdSeconds">00</div>
+        <div class="countdown-label">Seconds</div>
+      </div>
+    </div>
+
+    <div class="ceremony-action-btns">
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Egi+%26+Jelica&dates=20260808T060000Z/20260808T100000Z&details=We+cordially+invite+you+to+celebrate+the+wedding+of+Egi+%26+Jelica.&location=D%27King+Caf%C3%A9+%26+Restaurant%2C+Jl.+Pejuang+45+No.55%2C+Karanganyar%2C+Kec.+Subang%2C+Kabupaten+Subang%2C+Jawa+Barat+41211" target="_blank" class="btn">SAVE THE DATE</a>
+    </div>
+
     <div class="divider-line"></div>
     <p class="ceremony-venue">D'King Café & Restaurant</p>
     <p class="ceremony-address">
       Jl. Pejuang 45 No.55, Karanganyar, Kec. Subang, Kabupaten Subang, Jawa Barat 41211
     </p>
-    <a href="https://maps.app.goo.gl/qNW1Fu2QTBDg1ofJ8" target="_blank" class="btn">OPEN MAPS</a>
+
+    <!-- Ceremony Action Buttons: Open Maps & Save to Calendar -->
+    <div class="ceremony-action-btns">
+      <a href="https://maps.app.goo.gl/qNW1Fu2QTBDg1ofJ8" target="_blank" class="btn">OPEN MAPS</a>
+    </div>
 
     <div class="dress-code-container reveal delay-1">
       <h3 class="dress-code-title script-font">Dress Code</h3>
@@ -664,7 +805,7 @@
   <!-- Full Width Image 2 -->
   <section class="full-width-section reveal">
     <div class="full-width-img-wrapper">
-      <img src="./egijelica-5.jpeg" alt="Prewedding Full 2" style="transform: scale(1.3);">
+      <img src="./egijelica-5.jpeg" alt="Prewedding Full 2" style="transform: scale(1.3) translateX(2%);">
     </div>
   </section>
 
@@ -673,7 +814,7 @@
     <section>
       <div class="gift-grid">
         <div class="gift-img-wrapper reveal">
-          <img src="./egijelica-6.jpeg" alt="Love Gift Image" style="object-position: center 60%;">
+          <img src="./egijelica-6.jpeg" alt="Love Gift Image" style="object-position: center 70%;">
         </div>
         <div class="gift-info reveal delay-1">
           <h2 class="gift-title script-font">Love Gift</h2>
@@ -712,12 +853,17 @@
                 <input type="number" id="guests" class="form-input" placeholder="e.g. 2" min="1" max="5" required>
             </div>
             <div class="form-group">
-                <label class="form-label" for="attendance">Attendance</label>
-                <select id="attendance" class="form-input" required>
-                  <option value="" disabled selected>Please select</option>
-                  <option value="Attending">Attending</option>
-                  <option value="Not Attending">Not Attending</option>
-                </select>
+                <label class="form-label">Attendance</label>
+                <div class="attendance-grid">
+                  <label class="attendance-option">
+                    <input type="radio" name="attendance" value="Yes" checked required>
+                    <span class="attendance-card">Yes, I'm in</span>
+                  </label>
+                  <label class="attendance-option">
+                    <input type="radio" name="attendance" value="No" required>
+                    <span class="attendance-card">No, I'll pass</span>
+                  </label>
+                </div>
             </div>
             <div class="form-group">
                 <label class="form-label" for="message">Wishes & Messages</label>
@@ -734,7 +880,7 @@
   <!-- Full Width Image 3 -->
   <section class="full-width-section reveal">
     <div class="full-width-img-wrapper">
-      <img src="./egijelica-7.jpeg" alt="Prewedding Full 3">
+      <img src="./egijelica-7.jpeg" alt="Prewedding Full 3" style="object-position: center 65%;">
     </div>
   </section>
 
@@ -743,7 +889,7 @@
     <section class="closing-section">
       <div class="closing-grid">
         <div class="closing-img-wrapper reveal">
-          <img src="./egijelica-8.jpeg" alt="Closing Image" style="object-position: center 55%;">
+          <img src="./egijelica-8.jpeg" alt="Closing Image" >
         </div>
         <div class="closing-info reveal delay-1">
           <p>Your presence will truly make our day.</p>
@@ -783,7 +929,36 @@
       }
     });
 
-    // 2. Music Player & Welcome Gate Control
+    // 2. Countdown Timer Logic
+    const eventDate = new Date("August 8, 2026 13:00:00 GMT+0700").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = eventDate - now;
+
+      if (difference < 0) {
+        document.getElementById("cdDays").innerText = "00";
+        document.getElementById("cdHours").innerText = "00";
+        document.getElementById("cdMinutes").innerText = "00";
+        document.getElementById("cdSeconds").innerText = "00";
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById("cdDays").innerText = days < 10 ? '0' + days : days;
+      document.getElementById("cdHours").innerText = hours < 10 ? '0' + hours : hours;
+      document.getElementById("cdMinutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById("cdSeconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // 3. Music Player & Welcome Gate Control
     const bgMusic = document.getElementById('bgMusic');
     const welcomeOverlay = document.getElementById('welcomeOverlay');
     const openInvitationBtn = document.getElementById('openInvitationBtn');
@@ -823,7 +998,7 @@
       }
     });
 
-    // 3. Scroll Reveal Animation Logic
+    // 4. Scroll Reveal Animation Logic
     function triggerScrollAnimations() {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -838,7 +1013,7 @@
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     }
 
-    // 4. Copy to Clipboard Function
+    // 5. Copy to Clipboard Function
     function copyToClipboard(text) {
       navigator.clipboard.writeText(text).then(() => {
         alert('Copied to clipboard: ' + text);
@@ -847,7 +1022,7 @@
       });
     }
 
-    // 5. RSVP Form Handler
+    // 6. RSVP Form Handler
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxK5jkFLwr0YFv-gWhCPCdTSA6uFxtAqSkYc5Tt5UB5vdDw8MCTpmeODH6yPdvieWqR8Q/exec';
 
     const rsvpForm = document.getElementById('rsvpForm');
@@ -861,10 +1036,12 @@
         rsvpSubmitBtn.disabled = true;
         rsvpSubmitBtn.innerText = 'SENDING...';
 
+        const selectedAttendance = document.querySelector('input[name="attendance"]:checked')?.value || 'Attending';
+
         const formData = {
           name: document.getElementById('name').value,
           guests: document.getElementById('guests').value,
-          attendance: document.getElementById('attendance').value,
+          attendance: selectedAttendance,
           message: document.getElementById('message').value
         };
 
